@@ -23,7 +23,7 @@ module cpu_3(clk, reset);
   wire[4:0] R2;
 
   flipflop_32 flipflop_32_0(Q, D, clk, reset);
-  adder_32 adder_32_0(Q, 4, pc4);
+  adder_32 (Q, 4, pc4);
   shift_left_2_25_27 shift_left_2_25_27_0(instr[24:0], instrShifted);
   imem imem_0(Q, instr);
   multiplexer_5_2 multiplexer_5_0(instr[14:10], instr[24:20], Wtype, R2);
