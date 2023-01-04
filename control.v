@@ -104,7 +104,7 @@ module control(instr, ALUControl, RegWrite, ALUSrc, MemWriteB, MemWriteW, MemRea
     end
     else if (instr == 49) //JUMP
     begin
-      RegWrite = 1;
+      RegWrite = 0;
       MemWriteB = 0;
       MemWriteW = 0;
       Jump = 1;
