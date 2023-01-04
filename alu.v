@@ -17,6 +17,10 @@ module alu(a, b, ALUControl, res, Zero);
     begin
       res <= #40 a - b;
     end
+    else if (ALUControl ==2)
+    begin
+    res <= #40 a * b;
+    end
   end
 
   assign Zero = (a == b);
