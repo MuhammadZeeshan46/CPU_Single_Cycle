@@ -10,7 +10,7 @@ module cpu_3_tb();
     begin
       $dumpfile("cpu_3_tb.vcd");
       $dumpvars(0, cpu_3_tb);
-      clk = 0;
+      clk = 1;
       reset = 0;
       #55 reset = 1;
       #125000 $finish;
