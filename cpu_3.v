@@ -28,7 +28,7 @@ module cpu_3(clk, reset);
   imem imem_0(Q, instr);
   multiplexer_5_2 multiplexer_5_0(instr[14:10], instr[24:20], Wtype, R2);
   rmem rmem_0(instr[19:15], R2, instr[24:20], RegWrite, WriteData, clk, RA, RB);
-  control control_0(instr[31:25], ALUControl, RegWrite, ALUSrc, MemWriteB, MemWriteW, MemReadB, MemReadW, MemtoReg, Branch, Jump);
+  control control_0(instr[31:25], ALUControl, RegWrite, ALUSrc, MemWriteB, MemWriteW, MemReadB, MemReadW, MemtoReg, Jump);
   or_2 or_2_0(MemWriteB, MemWriteW, Wtype);
   signextend_32 signextend_32_0(instr, extended);
   shift_left_2_32_32 shift_left_2_32_32_0(extended, shifted);
